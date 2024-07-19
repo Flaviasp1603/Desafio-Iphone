@@ -1,18 +1,49 @@
-## Getting Started
+## Desafio Java Básico - Iphone
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Autores
+- [Flávia Soares](https://github.com/Flaviasp1603)
 
-## Folder Structure
+Repositório criado para resolução de um Desafio DIO- Bootcamp Santander 2024 - Backend com Java, onde contempla a Modelagem e Diagramação em representação UML do componente iPhone, abrangendo suas funcionalidades como Reprodutor Musical, Aparelho Telefônico e Navegador na Internet.
 
-The workspace contains two folders by default, where:
+## Ferramentas e tecnologias
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=30A3DC)
+![Git](https://img.shields.io/badge/Git-000?style=for-the-badge&logo=git&logoColor=E94D5F)
+![Java](https://img.shields.io/badge/Java-000?style=for-the-badge&logo=openjdk&logoColor=ED8B00) 
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Diagrama UML
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+O diagrama UML foi criado utilizando a sintaxe [Mermaid](https://mermaid.js.org/), uma alternativa de código aberto e compatível com arquivos Markdown.
 
-## Dependency Management
+```mermaid
+classDiagram
+    class ReprodutorMusical {
+        +tocar()          
+        +pausar()         
+        +selecionarMusica(musica: String)
+    }
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+    class AparelhoTelefonico {
+        +ligar(numero: String)
+        +atender()              
+        +iniciarCorreioVoz() 
+    }
+
+    class NavegadorInternet {
+        +exibirPagina(url: String)      
+        +adicionarNovaAba()             
+        +atualizarPagina()
+    }
+
+    class Iphone {
+    }
+
+    Iphone --> ReprodutorMusical
+    Iphone --> AparelhoTelefonico
+    Iphone --> NavegadorInternet
+
+    class SistemaOperacional {
+    }
+
+    SistemaOperacional --> Iphone
+```
